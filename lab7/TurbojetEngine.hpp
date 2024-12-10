@@ -1,13 +1,12 @@
-//
-//  TurbojetEngine.hpp
-//  lab7
-//
-//  Created by Андрей Ярема on 10.12.2024.
-//
-
-#ifndef TurbojetEngine_hpp
-#define TurbojetEngine_hpp
-
+#pragma once
 #include <stdio.h>
+#include "Engine.hpp"
 
-#endif /* TurbojetEngine_hpp */
+class TurbojetEngine : public Engine {
+private:
+    double thrust;
+
+public:
+    TurbojetEngine(double thrust);
+    void show() const override;
+};

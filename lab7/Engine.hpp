@@ -1,13 +1,17 @@
-//
-//  Engine.hpp
-//  lab7
-//
-//  Created by Андрей Ярема on 10.12.2024.
-//
-
-#ifndef Engine_hpp
-#define Engine_hpp
-
+#pragma once
 #include <stdio.h>
+#include <list>
+#include <string>
 
-#endif /* Engine_hpp */
+class Engine{
+protected:
+    std::string type;
+    static std::list<Engine*> engines;
+    
+public:
+    Engine(const std::string& type);
+    virtual ~Engine();
+    virtual void show() const = 0;
+    void add();
+    static void print();
+};

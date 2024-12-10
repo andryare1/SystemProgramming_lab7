@@ -1,13 +1,13 @@
-//
-//  Diesel.hpp
-//  lab7
-//
-//  Created by Андрей Ярема on 10.12.2024.
-//
-
-#ifndef Diesel_hpp
-#define Diesel_hpp
-
+#pragma once
 #include <stdio.h>
+#include "Engine.hpp"
 
-#endif /* Diesel_hpp */
+class Diesel : Engine {
+private:
+    int cylinderCount;
+
+public:
+    Diesel(int cylinderCount);
+    void show() const override;
+};
+

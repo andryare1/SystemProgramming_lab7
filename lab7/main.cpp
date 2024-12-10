@@ -1,14 +1,15 @@
-//
-//  main.cpp
-//  lab7
-//
-//  Created by Андрей Ярема on 10.12.2024.
-//
-
 #include <iostream>
+#include "Diesel.hpp"
+#include "InternalCombustionEngine.hpp"
+#include "TurbojetEngine.hpp"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main() {
+    Diesel diesel(6);
+    TurbojetEngine turbojet(150.0);
+    InternalCombustionEngine ice(500);
+    ice.add();
+    std::cout << "Список двигателей:" << std::endl;
+    Engine::print();
+    
     return 0;
 }

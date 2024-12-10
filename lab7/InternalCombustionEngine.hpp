@@ -1,13 +1,12 @@
-//
-//  InternalCombustionEngine.hpp
-//  lab7
-//
-//  Created by Андрей Ярема on 10.12.2024.
-//
+#pragma once
+#include "Engine.hpp"
 
-#ifndef InternalCombustionEngine_hpp
-#define InternalCombustionEngine_hpp
+class InternalCombustionEngine : public Engine {
+protected:
+    int displacement;
 
-#include <stdio.h>
+public:
+    InternalCombustionEngine(int displacement);
+    void show() const override;
+};
 
-#endif /* InternalCombustionEngine_hpp */
